@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework: Renewable Energy</title>
+    <style>
+        /* Modern CSS Variables for easy color changes */
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #546e7a;
+            --accent-red: #e74c3c;
+            --accent-green: #2ecc71;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth, modern page base */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* Centered layout container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        /* Hero Header section */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #b0bec5;
+        }
+
+        /* Clean section titles */
+        h2 {
+            color: var(--text-main);
+            font-size: 1.6rem;
+            border-left: 5px solid var(--accent-red);
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Content blocks */
+        p.intro {
+            font-size: 1.1rem;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Interactive Grid for Energy Types */
+        .energy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .energy-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-red);
+            transition: transform 0.2s ease;
+        }
+
+        .energy-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .energy-card strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        /* Pros and Cons Split Layout */
+        .split-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .pro-con-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .pro-card { border-top: 4px solid var(--accent-green); }
+        .con-card { border-top: 4px solid var(--accent-red); }
+
+        .pro-con-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        /* Navigation Button Container */
+        .nav-container {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #cfd8dc;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 28px;
+            margin: 10px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-non {
+            background-color: var(--accent-red);
+            color: white;
+        }
+
+        .btn-renewable {
+            background-color: var(--accent-green);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>What is Renewable Energy?</h1>
+        </header>
+
+        <p class="intro">Renewable energy comes from enviromentaly friendly sources </p>
+
+        <h2>Types of Renewable Energy</h2>
+        <ul class="energy-grid">
+            <li class="energy-card">
+                <strong>☀️ solar</strong> 
+                A panle that takes in rays from the sun and proseses them into energy.
+            </li>
+            <li class="energy-card">
+                <strong>💨 wind</strong> 
+                A big turbine spins round wich generates energy.
+            </li>
+            <li class="energy-card">
+                <strong>💧 water</strong> 
+                Water spins a wheel that makes energy.
+            </li>
+            <li class="energy-card">
+                <strong>🌋 Natrual</strong> 
+                A volcano or crack in the earth makes heat and we use that heat to power and heat our homes.
+            </li>
+        </ul>
+
+        <h2>Pros and Cons</h2>
+        <div class="split-container">
+            <div class="pro-con-card pro-card">
+                <h3 style="color: var(--accent-green);">👍 Advantages</h3>
+                <p>They are good for the enviroment and make the sky happy.</p>
+            </div>
+            <div class="pro-con-card con-card">
+                <h3 style="color: var(--accent-red);">👎 Disadvantages</h3>
+                <p>They need special requirements to work</p>
+            </div>
+        </div>
+
+        <!-- Integrated your unused button classes into a helpful navigation footer -->
+        <div class="nav-container">
+            <a href="../">Go to homepage</a>
+        </div>
+    </div>
+
+</body>
+</html>
